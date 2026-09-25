@@ -1,0 +1,40 @@
+{
+  "name": "openmuse",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Muse-style personal AI agent UI powered by Manus API v2, with webhook callback server",
+  "scripts": {
+    "dev": "concurrently -k -n server,web -c blue,magenta \"npm run server\" \"npm run web\"",
+    "server": "node server/index.js",
+    "web": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "start": "NODE_ENV=production node server/index.js",
+    "lint": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@tanstack/react-query": "^5.62.8",
+    "@tanstack/react-router": "^1.95.1",
+    "clsx": "^2.1.1",
+    "cors": "^2.8.5",
+    "date-fns": "^4.1.0",
+    "express": "^4.21.2",
+    "lucide-react": "^0.469.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-markdown": "^9.0.1",
+    "tailwind-merge": "^2.6.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "^10.4.20",
+    "concurrently": "^9.1.2",
+    "postcss": "^8.4.49",
+    "tailwindcss": "^3.4.17",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.6"
+  }
+}

@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #f5f5f7;
+  color: #1c1c1e;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #d1d1d6;
+  border-radius: 3px;
+}
+
+.prose-muse {
+  @apply text-[15px] leading-[1.45] text-muse-text;
+}
+.prose-muse p {
+  @apply mb-2.5 last:mb-0;
+}
+.prose-muse ul {
+  @apply list-disc pl-5 mb-2.5 space-y-1;
+}
+.prose-muse ol {
+  @apply list-decimal pl-5 mb-2.5 space-y-1;
+}
+.prose-muse code {
+  @apply bg-black/5 px-1.5 py-0.5 rounded text-[13px] font-mono;
+}
+.prose-muse pre {
+  @apply bg-black/[0.04] rounded-xl p-3 overflow-x-auto mb-2.5 text-[13px];
+}
+.prose-muse a {
+  @apply text-muse-accent underline underline-offset-2;
+}
